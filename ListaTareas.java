@@ -41,5 +41,35 @@ public class ListaTareas
         }
     }
     
+    public void mostrarCoincidencias (String textoABuscar)
+    {
+        int posicion = 1;
+        int numeroDeCoincidencias = 0;
+        String textoAMostrar = "";
+        for (Tarea tareaAMostrar : listaDeTareas)
+        {
+            if (tareaAMostrar.getDescripcion().contains(textoABuscar))
+            {
+                textoAMostrar += posicion + "-. " + tareaAMostrar.getDescripcion();
+                if (tareaAMostrar.getEstadoTarea())
+                {
+                    textoAMostrar += " HECHO.";
+                }
+                System.out.println(textoAMostrar);
+                numeroDeCoincidencias ++;
+            }             
+            posicion ++;
+        }
+        
+        if (numeroDeCoincidencias == 0)
+        {
+            System.out.println("No hay tareas que contengan el texto " + textoABuscar + ".");
+        }
+        else
+        {
+             System.out.println("Hay " + numeroDeCoincidencias + " tareas encontradas con el texto " + textoABuscar + " .");
+        }        
+    }
+      
 
 }
