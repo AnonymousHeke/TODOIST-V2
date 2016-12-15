@@ -71,5 +71,12 @@ public class ListaTareas
         }        
     }
       
-
+    public void eliminaTarea(int numeroTarea) 
+    {
+        int posicion = numeroTarea -1;
+        if (posicion >= 0 && posicion < listaDeTareas.size())
+        {
+            listaDeTareas.remove(posicion);
+        }
+    }
 }
