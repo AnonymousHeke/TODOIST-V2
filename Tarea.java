@@ -20,4 +20,9 @@ public class Tarea
     {
         return estadoTarea;
     }
+    
+    public void tareaCompletada()
+    {
+        estadoTarea = true;
+    }
 }

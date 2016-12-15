@@ -1,6 +1,10 @@
 #BlueJ class context
 comment0.params=
 comment0.target=ListaTareas()
-comment1.params=
-comment1.target=void\ mostrarTareas()
-numComments=2
+comment1.params=descripcion
+comment1.target=void\ a\u00F1adirTarea(java.lang.String)
+comment2.params=
+comment2.target=void\ mostrarTareas()
+comment3.params=numeroTarea
+comment3.target=void\ marcarCompletada(int)
+numComments=4

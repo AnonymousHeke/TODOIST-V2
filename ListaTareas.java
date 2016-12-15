@@ -9,6 +9,12 @@ public class ListaTareas
     {
         listaDeTareas = new ArrayList<Tarea>();        
     }
+    
+    public void añadirTarea(String descripcion)
+    {
+        Tarea nuevaTarea = new Tarea(descripcion);
+        listaDeTareas.add(nuevaTarea);
+    }
      
     public void mostrarTareas()
     {
@@ -16,13 +22,24 @@ public class ListaTareas
         for (Tarea tareaAMostrar : listaDeTareas)
         {
             String textoAMostrar = "";
-            textoAMostrar = posicion + "-. " + tareaAMostrar.getDescripcion();
+            textoAMostrar = posicion + "-. " + tareaAMostrar.getDescripcion() + ".";
             if (tareaAMostrar.getEstadoTarea())
             {
-                textoAMostrar += ". HECHO.";
+                textoAMostrar += " HECHO.";
             }
             System.out.println(textoAMostrar);
             posicion ++;
         }
     }
+
+    public void marcarCompletada (int numeroTarea)
+    {
+        int posicion = numeroTarea - 1;
+        if (posicion >= 0 && posicion < listaDeTareas.size())
+        {
+            listaDeTareas.get(posicion).tareaCompletada();             
+        }
+    }
+    
+
 }
