@@ -11,4 +11,13 @@ public class Tarea
         estadoTarea = false;
     }
 
+    public String getDescripcion()
+    {
+        return descripcion;
+    }
+    
+    public boolean getEstadoTarea()
+    {
+        return estadoTarea;
+    }
 }
